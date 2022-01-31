@@ -4,6 +4,7 @@ import com.yakovliam.ecoporium.api.EcoporiumPlugin;
 import com.yakovliam.ecoporium.api.market.MarketCache;
 import com.yakovliam.ecoporiumscreenaddon.api.Plugin;
 import com.yakovliam.ecoporiumscreenaddon.api.message.Message;
+import com.yakovliam.ecoporiumscreenaddon.command.CommandManager;
 import com.yakovliam.ecoporiumscreenaddon.config.EcoporiumConfig;
 import com.yakovliam.ecoporiumscreenaddon.map.MapPlacementHandler;
 import com.yakovliam.ecoporiumscreenaddon.message.Messages;
@@ -75,10 +76,14 @@ public class EcoporiumScreenAddonPlugin extends Plugin {
         this.mapPlacementHandler = new MapPlacementHandler(this);
         this.trendScreenManager = new TrendScreenManager(this);
 
+        new CommandManager(this);
+
         // get ecoporium plugin
         RegisteredServiceProvider<EcoporiumPlugin> provider = Bukkit.getServicesManager().getRegistration(EcoporiumPlugin.class);
         if (provider != null) {
             this.marketCache = provider.getProvider().getMarketCache();
+        } else {
+            this.getLogger().severe("Can't hook into Ecoporium markets!");
         }
     }
 

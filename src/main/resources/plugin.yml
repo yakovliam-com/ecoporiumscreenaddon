@@ -1,8 +1,8 @@
 name: @name@
 version: @version@
-description: A Minecraft Plugin designed to synchronize real-world stock and cryptocurrency markets with in-game currency through Vault
-authors: [yakovliam, bobby29831]
-website: https://ecoporium.net
+description: A Minecraft Plugin addon designed to create in-game trend screens while hooking with Ecoporium
+author: yakovliam
+website: https://yakovliam.com
 main: com.yakovliam.ecoporiumscreenaddon.EcoporiumScreenAddonPlugin
 api-version: 1.17
 depend:
