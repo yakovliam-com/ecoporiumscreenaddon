@@ -22,15 +22,6 @@ public class Storage {
     }
 
     /**
-     * Returns the storage implementation
-     *
-     * @return implementation
-     */
-    public StorageImplementation getStorageImplementation() {
-        return storageImplementation;
-    }
-
-    /**
      * Loads trend screens
      */
     public List<TrendScreen> loadTrendScreens() {
