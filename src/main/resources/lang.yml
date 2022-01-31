@@ -1,0 +1,16 @@
+something-went-wrong: "&cSomething went wrong!"
+ecoporium:
+  help:
+    - "&7Help"
+  reloaded:
+    - "&7Reloaded."
+  market:
+    nonexistent:
+      - "&7That market does not exist."
+    getting-data:
+      - "&7Getting market data..."
+    symbol-doesnt-exist:
+      - "&7That symbol doesn't exist in that market."
+placement:
+  start-placing:
+    - "&7Start placing a &f%widthmaps%&7x&f%heightmaps% &7sized screen, going from &ftop to bottom &7& &fleft to right&7. &dFirst go down &f%heightmaps%&d, then repeat that going left &f%widthmaps% &dtimes."
