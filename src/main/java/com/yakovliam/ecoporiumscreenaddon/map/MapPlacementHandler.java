@@ -70,8 +70,7 @@ public class MapPlacementHandler implements Listener {
 
         // create maps
         List<MapView> mapViewList = IntStream.range(0, numberOfMaps)
-                .mapToObj(i -> Bukkit.createMap(player.getWorld()))
-                .collect(Collectors.toList());
+                .mapToObj(i -> Bukkit.createMap(player.getWorld())).toList();
 
         // get map ids
         List<Integer> mapIds = mapViewList.stream()

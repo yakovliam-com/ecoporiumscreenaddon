@@ -20,16 +20,16 @@ public class Messages {
     public final Message ecoporiumReloaded;
 
     // screen create cancel not in placement session
-    public Message ecoporiumScreenCreateNotInPlacementSession;
+    public final Message ecoporiumScreenCreateNotInPlacementSession;
 
     // screen create already in session
-    public Message ecoporiumScreenCreateAlreadyInPlacementSession;
+    public final Message ecoporiumScreenCreateAlreadyInPlacementSession;
 
     // screen create canceled
-    public Message ecoporiumScreenCreateCanceled;
+    public final Message ecoporiumScreenCreateCanceled;
 
     // screen cant find
-    public Message ecoporiumScreenDeleteCantFind;
+    public final Message ecoporiumScreenDeleteCantFind;
 
     // screen deleted
     public final Message ecoporiumScreenDeleteDeleted;

@@ -52,16 +52,6 @@ public class EcoporiumScreenAddonPlugin extends Plugin {
     private MarketCache marketCache;
 
     @Override
-    public void onLoad() {
-        super.onLoad();
-    }
-
-    @Override
-    public void onDisable() {
-        super.onDisable();
-    }
-
-    @Override
     public void onEnable() {
 
         // initialize audience provider

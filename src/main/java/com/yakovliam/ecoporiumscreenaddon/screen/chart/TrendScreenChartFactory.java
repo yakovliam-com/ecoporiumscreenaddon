@@ -21,7 +21,6 @@ import java.awt.image.BufferedImage;
 import java.util.Collections;
 import java.util.concurrent.LinkedBlockingDeque;
 
-import static com.yakovliam.ecoporium.api.market.stock.HistoricalAnalysis.*;
 import static com.yakovliam.ecoporiumscreenaddon.config.EcoporiumConfigKeys.*;
 
 public class TrendScreenChartFactory implements Factory<TrendScreen, BufferedImage> {
