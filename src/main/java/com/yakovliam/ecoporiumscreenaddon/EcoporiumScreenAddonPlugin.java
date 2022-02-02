@@ -57,6 +57,14 @@ public class EcoporiumScreenAddonPlugin extends Plugin {
         // initialize audience provider
         Message.initAudience(this);
 
+        // get ecoporium plugin
+        RegisteredServiceProvider<EcoporiumPlugin> provider = Bukkit.getServicesManager().getRegistration(EcoporiumPlugin.class);
+        if (provider != null) {
+            this.marketCache = provider.getProvider().getMarketCache();
+        } else {
+            this.getLogger().severe("Can't hook into Ecoporium markets!");
+        }
+
         this.ecoporiumConfig = new EcoporiumConfig(this, provideConfigAdapter("config.yml"));
         this.langConfig = new EcoporiumConfig(this, provideConfigAdapter("lang.yml"));
 
@@ -67,14 +75,6 @@ public class EcoporiumScreenAddonPlugin extends Plugin {
         this.trendScreenManager = new TrendScreenManager(this);
 
         new CommandManager(this);
-
-        // get ecoporium plugin
-        RegisteredServiceProvider<EcoporiumPlugin> provider = Bukkit.getServicesManager().getRegistration(EcoporiumPlugin.class);
-        if (provider != null) {
-            this.marketCache = provider.getProvider().getMarketCache();
-        } else {
-            this.getLogger().severe("Can't hook into Ecoporium markets!");
-        }
     }
 
     /**
