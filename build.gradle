@@ -12,14 +12,7 @@ project.ext.groupId = 'com.yakovliam.ecoporiumscreenaddon'
 
 repositories {
     mavenCentral()
-    maven {
-        url = 'https://hub.spigotmc.org/nexus/content/repositories/snapshots/'
-        content {
-            includeGroup 'org.bukkit'
-            includeGroup 'org.spigotmc'
-        }
-    }
-    maven { url = 'https://repo.incendo.org/content/repositories/snapshots' }
+    maven { url = 'https://hub.spigotmc.org/nexus/content/repositories/snapshots/' }
     maven { url = 'https://oss.sonatype.org/content/repositories/snapshots' }
     maven { url = 'https://oss.sonatype.org/content/repositories/central' }
     maven { url = 'https://repo.mattstudios.me/artifactory/public/' }
