@@ -75,6 +75,9 @@ shadowJar {
     relocate "org.slf4j", "${project.ext.groupId}.lib.slf4j"
     relocate "org.checkerframework", "${project.ext.groupId}.lib.checkerframework"
     relocate "io.leangen", "${project.ext.groupId}.lib.leangen"
+
+    relocate "com.github.johnnyjayjay.spigotmaps", "${project.ext.groupId}.lib.spigotmaps"
+    relocate "com.google.gson", "${project.ext.groupId}.lib.google.gson"
 }
 
 // Replace version information in src/main/resources
