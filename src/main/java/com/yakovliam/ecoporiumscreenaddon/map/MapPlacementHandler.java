@@ -61,12 +61,8 @@ public class MapPlacementHandler implements Listener {
      * @param screenInfo  screen info
      */
     public void createScreen(Player player, Market<?> market, StockTicker<?> stockTicker, ScreenInfo screenInfo) {
-        // calculate number of maps per width & height
-        Pair<Integer, Integer> mapScreenSize = ScreenCalculationUtil.calculateWidthHeightMaps(screenInfo);
         // calculate number of maps required
         int numberOfMaps = ScreenCalculationUtil.calculateNumberOfMapsRequired(screenInfo);
-
-        plugin.getMessages().placementStartPlacing.message(player, "%widthmaps%", Integer.toString(mapScreenSize.getLeft()), "%heightmaps%", Integer.toString(mapScreenSize.getRight()));
 
         // create maps
         List<MapView> mapViewList = IntStream.range(0, numberOfMaps)

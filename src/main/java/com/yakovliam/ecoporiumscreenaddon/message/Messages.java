@@ -25,10 +25,13 @@ public class Messages {
     // screen create already in session
     public final Message ecoporiumScreenCreateAlreadyInPlacementSession;
 
+    // screen create start
+    public final Message ecoporiumScreenCreateStart;
+
     // screen create canceled
     public final Message ecoporiumScreenCreateCanceled;
 
-    // screen cant find
+    // screen can't find
     public final Message ecoporiumScreenDeleteCantFind;
 
     // screen deleted
@@ -42,12 +45,6 @@ public class Messages {
 
     // market symbol doesn't exist
     public final Message ecoporiumMarketSymbolDoesntExist;
-
-    /**
-     * Placement
-     */
-
-    public final Message placementStartPlacing;
 
     /**
      * Messages
@@ -67,9 +64,9 @@ public class Messages {
 
         ecoporiumScreenCreateNotInPlacementSession = Message.fromConfigurationSection("ecoporium.screen.create.not-in-placement-session", adapter);
         ecoporiumScreenCreateAlreadyInPlacementSession = Message.fromConfigurationSection("ecoporium.screen.create.already-in-placement-session", adapter);
+        ecoporiumScreenCreateStart = Message.fromConfigurationSection("ecoporium.screen.create.start", adapter);
         ecoporiumScreenCreateCanceled = Message.fromConfigurationSection("ecoporium.screen.create.canceled", adapter);
         ecoporiumScreenDeleteCantFind = Message.fromConfigurationSection("ecoporium.screen.delete.cant-find", adapter);
         ecoporiumScreenDeleteDeleted = Message.fromConfigurationSection("ecoporium.screen.delete.deleted", adapter);
-        placementStartPlacing = Message.fromConfigurationSection("placement.start-placing", adapter);
     }
 }

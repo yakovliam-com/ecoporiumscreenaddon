@@ -57,7 +57,7 @@ public class EcoporiumScreenCommand extends AbstractEcoporiumCommand {
         @Subcommand("create")
         @Description("Creates a trend screen through a placement session")
         @CommandPermission("ecoporium.command.ecoporium.screen.create")
-        public void onCreate(Player player, @Single String market, @Single String symbol, @Syntax("EXAMPLES: 5x5 or 7x7") @Single String dimensions) {
+        public void onCreate(Player player, @Single String market, @Single String symbol, @Syntax("(WxH) EXAMPLES: 5x5 or 16x9") @Single String dimensions) {
             plugin.getMessages().ecoporiumMarketGettingData.message(player);
 
             // if already in a session
@@ -92,6 +92,11 @@ public class EcoporiumScreenCommand extends AbstractEcoporiumCommand {
 
                 // parse into screen info
                 ScreenInfo screenInfo = ScreenCalculationUtil.constructFromMapSizeDimensions(dimensionsPair);
+
+                // calculate number of maps per width & height
+                // yes, I know it's done twice (another time in the #createScreen method) but this can be fixed later
+                Pair<Integer, Integer> mapScreenSize = ScreenCalculationUtil.calculateWidthHeightMaps(screenInfo);
+                plugin.getMessages().ecoporiumScreenCreateStart.message(player, "%widthmaps%", Integer.toString(mapScreenSize.getLeft()), "%heightmaps%", Integer.toString(mapScreenSize.getRight()));
 
                 // call map placement handler to create screen
                 plugin.getMapPlacementHandler().createScreen(player, marketObj, stockTicker, screenInfo);
