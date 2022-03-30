@@ -1,4 +1,5 @@
-something-went-wrong: "&cSomething went wrong!"
+something-went-wrong:
+  - "&cSomething went wrong!"
 ecoporium:
   help:
     - "&7Help"
