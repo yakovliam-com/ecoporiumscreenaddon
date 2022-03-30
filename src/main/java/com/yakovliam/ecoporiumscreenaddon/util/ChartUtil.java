@@ -14,15 +14,18 @@ public class ChartUtil {
      * Loading messages
      */
     private static final List<String> LOADING_MESSAGES = Arrays.asList(
-            "Scaling Bananas",
-            "Building Lore",
-            "Resetting Run",
-            "Rushing B",
-            "Entering Cheat Codes",
-            "spinning to win",
-            "Error 404: Joke Not Found",
-            "[A MEME]",
-            "Loading Stock Data..."
+            "Scaling Bananas...",
+            "Rushing B...",
+            "Please wait while the minions do their work...",
+            "You are 28414th in the queue...",
+            "Entering Cheat Codes...",
+            "Spinning to win...",
+            "Error 404: Joke Not Found...",
+            "Deleting all of your files...",
+            "Formatting the C: drive...",
+            "Press Alt+F4 to go faster...",
+            "Loading Stock Data...",
+            "Dave is working on it..."
     );
 
     /**
